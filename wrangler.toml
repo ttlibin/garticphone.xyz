@@ -1,0 +1,5 @@
+name = "gartic-phone"
+compatibility_date = "2025-01-26"
+
+[assets]
+directory = "."

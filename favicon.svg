@@ -1,0 +1,49 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="16" cy="16" r="15" fill="#00D4AA"/>
+  
+  <!-- 调色盘 - 左侧 -->
+  <g transform="translate(4, 10)">
+    <!-- 调色盘主体 -->
+    <ellipse cx="6" cy="6" rx="5.5" ry="4.5" fill="#FFFFFF"/>
+    
+    <!-- 调色盘中心孔 -->
+    <ellipse cx="6" cy="6" rx="1.5" ry="1.2" fill="#00D4AA"/>
+    
+    <!-- 颜料色块 -->
+    <circle cx="3" cy="3" r="1.2" fill="#8B5A96"/>
+    <circle cx="9" cy="3" r="1.2" fill="#E74C3C"/>
+    <circle cx="2" cy="8" r="1.2" fill="#F39C12"/>
+    <circle cx="10" cy="8" r="1.2" fill="#3498DB"/>
+    <circle cx="6" cy="2" r="1" fill="#2ECC71"/>
+    <circle cx="6" cy="10" r="1" fill="#9B59B6"/>
+  </g>
+  
+  <!-- 电话听筒 - 右侧 -->
+  <g transform="translate(18, 8)">
+    <!-- 听筒主体 - 经典弧形 -->
+    <path d="M2 0 C0 0 0 2 1 4 L1 8 C0 10 0 12 2 12 L8 12 C10 12 10 10 9 8 L9 4 C10 2 10 0 8 0 Z" fill="#FFFFFF"/>
+    
+    <!-- 听筒话筒端 -->
+    <ellipse cx="2.5" cy="2" rx="1.8" ry="1.5" fill="#8B5A96"/>
+    <ellipse cx="2.5" cy="2" rx="1" ry="0.8" fill="#FFFFFF"/>
+    
+    <!-- 听筒扬声器端 -->
+    <ellipse cx="7.5" cy="10" rx="1.8" ry="1.5" fill="#8B5A96"/>
+    <ellipse cx="7.5" cy="10" rx="1" ry="0.8" fill="#FFFFFF"/>
+    
+    <!-- 听筒中间握柄 -->
+    <rect x="3.5" y="4" width="3" height="4" fill="#FFFFFF" rx="1"/>
+    
+    <!-- 听筒握柄装饰线 -->
+    <rect x="4" y="5" width="2" height="0.5" fill="#E5E7EB" rx="0.25"/>
+    <rect x="4" y="6.5" width="2" height="0.5" fill="#E5E7EB" rx="0.25"/>
+  </g>
+  
+  <!-- 连接装饰 - 表示两者结合 -->
+  <path d="M12 16 Q14 14 16 16" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+  
+  <!-- 小装饰元素 -->
+  <circle cx="8" cy="28" r="1" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="26" cy="6" r="1.2" fill="#8B5A96" opacity="0.5"/>
+</svg>

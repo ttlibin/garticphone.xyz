@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://garticphone.xyz/sitemap.xml
+
+# Disallow crawling of admin areas (if any in future)
+# Disallow: /admin/
+
+# Allow all search engines to crawl the site
+# This is an open gaming website

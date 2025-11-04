@@ -1,0 +1,548 @@
+/* 配色方案C：Playful Pastel */
+:root {
+    --primary-color: #5BC0EB;      /* Sky Blue */
+    --secondary-color: #9BC53D;    /* Fresh Green */
+    --accent-color: #FDE74C;       /* Sunny Yellow */
+    --background-color: #FAFBFD;   /* Off White */
+    --text-color: #1F2A44;         /* Deep Navy */
+    --white: #FFFFFF;
+    --light-gray: #E9EEF5;         /* Neutral light */
+    --border-color: #C8D3E1;       /* Neutral border */
+    --shadow-color-rgb: 91, 192, 235; /* primary as RGB for shadows */
+}
+
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', 'Inter', 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 头部样式 */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(var(--shadow-color-rgb), 0.14);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* 主要内容区域 */
+.main {
+    padding: 2rem 0;
+}
+
+/* 游戏区域样式 */
+.game-section {
+    margin-bottom: 3rem;
+}
+
+.game-container {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(var(--shadow-color-rgb), 0.12);
+    border: 2px solid var(--accent-color);
+}
+
+#gamePlayer {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* 标签页区域样式 */
+.info-section {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(var(--shadow-color-rgb), 0.12);
+}
+
+.tabs-header {
+    display: flex;
+    background: var(--light-gray);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-btn:hover {
+    background: var(--background-color);
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+.tabs-content {
+    padding: 2rem;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-panel h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.tab-panel p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* 步骤列表样式 */
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: #F4F8FC; /* 淡化的浅底，提高层次感 */
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.step-number {
+    background: var(--secondary-color);
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+/* 特色列表样式 */
+.features-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.features-list li {
+    padding: 1rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    position: relative;
+}
+
+.features-list li::before {
+    content: '✓';
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* 底部样式 */
+.footer {
+    background: var(--text-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav ul {
+        gap: 1rem;
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        text-align: left;
+    }
+    
+    #gamePlayer {
+        height: 400px;
+    }
+    
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* 游
+戏亮点样式 */
+.game-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.highlight-item {
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(var(--shadow-color-rgb), 0.16);
+}
+
+.highlight-item h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.highlight-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* About页面内容卡片样式 */
+.content-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(var(--shadow-color-rgb), 0.12);
+    border: 1px solid var(--border-color);
+}
+
+.content-card h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.content-card h3 {
+    color: var(--primary-color);
+    margin: 2rem 0 1rem 0;
+    font-size: 1.3rem;
+}
+
+.content-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content-card ul li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.content-card ul li:last-child {
+    border-bottom: none;
+}
+
+.content-card ul li::before {
+    content: '▶';
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+}
+
+/* Contact页面样式 */
+.contact-info {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.contact-item {
+    background: var(--background-color);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.contact-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    line-height: 1.7;
+    margin: 0;
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.note {
+    background: #FEF3C7;
+    border: 1px solid #F59E0B;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.note p {
+    margin: 0;
+    color: #92400E;
+}
+
+/* 增强的响应式设计 */
+@media (max-width: 768px) {
+    .game-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight-item {
+        padding: 1rem;
+    }
+    
+    .content-card {
+        padding: 1.5rem;
+    }
+    
+    .content-card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-item {
+        padding: 1.5rem;
+    }
+}
+
+/* 加载动画优化 */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.step {
+    animation: slideInUp 0.6s ease forwards;
+}
+
+.step:nth-child(1) { animation-delay: 0.1s; }
+.step:nth-child(2) { animation-delay: 0.2s; }
+.step:nth-child(3) { animation-delay: 0.3s; }
+.step:nth-child(4) { animation-delay: 0.4s; }
+.step:nth-child(5) { animation-delay: 0.5s; }
+.step:nth-child(6) { animation-delay: 0.6s; }
+.step:nth-child(7) { animation-delay: 0.7s; }
+.step:nth-child(8) { animation-delay: 0.8s; }
+.step:nth-child(9) { animation-delay: 0.9s; }
+
+/* 游戏iframe加载状态 */
+.game-container::before {
+    content: 'Loading Game...';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.game-container {
+    position: relative;
+}
+
+#gamePlayer {
+    position: relative;
+    z-index: 2;
+}/*
+ 性能优化 */
+/* 预加载关键资源 */
+.game-container {
+    contain: layout style paint;
+}
+
+/* 优化字体加载 */
+body {
+    font-display: swap;
+}
+
+/* 减少重绘和回流 */
+.tab-btn, .highlight-item, .step {
+    will-change: transform;
+}
+
+.tab-btn:hover, .highlight-item:hover {
+    will-change: auto;
+}
+
+/* 优化滚动性能 */
+* {
+    scroll-behavior: smooth;
+}
+
+/* 图片懒加载准备 */
+img {
+    loading: lazy;
+}
+
+/* 减少动画在低性能设备上的影响 */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 打印样式优化 */
+@media print {
+    .header, .footer, .tabs-header {
+        display: none;
+    }
+    
+    .tab-panel {
+        display: block !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #008B8B;
+        --accent-color: #4B0082;
+        --text-color: #000000;
+        --background-color: #FFFFFF;
+    }
+}
+
+/* 深色模式准备 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --white: #2d2d2d;
+        --text-color: #e5e5e5;
+        --light-gray: #333333;
+        --border-color: #444444;
+    }
+    
+    .game-container {
+        background: var(--white);
+        border-color: var(--accent-color);
+    }
+}

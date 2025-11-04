@@ -1,0 +1,23 @@
+{
+  "name": "gartic-phone-website",
+  "version": "1.0.0",
+  "description": "Gartic Phone - Online Drawing and Guessing Game Website",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "wrangler deploy --assets=."
+  },
+  "keywords": [
+    "gartic-phone",
+    "online-game",
+    "drawing-game",
+    "guessing-game",
+    "multiplayer"
+  ],
+  "author": "garticphone.xyz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ttlibin/gartic-phone.git"
+  },
+  "homepage": "https://garticphone.xyz"
+}

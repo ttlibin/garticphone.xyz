@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects
+# HTTPS redirect is handled by Cloudflare SSL settings
+# This file can be empty or contain only relative redirects
